@@ -255,7 +255,7 @@ const InteractiveFeatures = () => {
                 Start Your Project
               </button>
               <button className="btn-secondary">
-                View Portfolio
+                Get Free Consultation
               </button>
             </div>
           </div>

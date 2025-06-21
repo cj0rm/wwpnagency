@@ -1,0 +1,97 @@
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: 'Anton', sans-serif;
+  color: #fff;
+  flex-direction: column;
+}
+
+.loading-container {
+  text-align: center;
+}
+
+.pixel-loader {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  margin: 0 auto 2rem;
+  background-color: #fff;
+  animation: pixel-loader-anim 2s infinite ease-in-out;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes pixel-loader-anim {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 1;
+    border-radius: 50%;
+  }
+  100% {
+    transform: scale(0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.loading-text {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.loading-text .char {
+  display: inline-block;
+  opacity: 0;
+  animation: char-fade-in 0.5s forwards;
+}
+
+.loading-text .char:nth-child(1) { animation-delay: 0.1s; }
+.loading-text .char:nth-child(2) { animation-delay: 0.2s; }
+.loading-text .char:nth-child(3) { animation-delay: 0.3s; }
+.loading-text .char:nth-child(4) { animation-delay: 0.4s; }
+.loading-text .char:nth-child(5) { animation-delay: 0.5s; }
+.loading-text .char:nth-child(6) { animation-delay: 0.6s; }
+.loading-text .char:nth-child(7) { animation-delay: 0.7s; }
+.loading-text .char:nth-child(8) { animation-delay: 0.8s; }
+.loading-text .char:nth-child(9) { animation-delay: 0.9s; }
+.loading-text .char:nth-child(10) { animation-delay: 1.0s; }
+
+
+@keyframes char-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.loading-subtext {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #aaa;
+  animation: subtext-fade 2s infinite alternate ease-in-out;
+}
+
+@keyframes subtext-fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+} 
